@@ -1,5 +1,7 @@
 package com.example.foodawi.common.di
 
+import com.example.foodawi.common.repositories.MainRepo.IMain
+import com.example.foodawi.common.repositories.MainRepo.MainRepo
 import org.koin.dsl.module
 
 /**
@@ -7,11 +9,5 @@ import org.koin.dsl.module
  */
 
 val repositoriesModule = module {
-//    single { LoginRepo(get(), get()) as ILogin }
-//    single { HomeMainRepo(get()) as HomeMain }
-//    single { CleaningRepo(get()) }
-//    single { ProvidersRepo(get()) }
-//    single { AddressesRepo(get()) }
-//    single { GeneralRepo(get()) }
-//    single { OrderRepo(get()) }
+    single { MainRepo(get()) as IMain }
 }

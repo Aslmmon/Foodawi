@@ -34,11 +34,11 @@ android {
     flavorDimensions "versions"
     productFlavors {
         staging {
-            buildConfigField "String", "SERVICE_URL", "\"https://homy.arabaps.com\""
+            buildConfigField "String", "SERVICE_URL", "\"https://www.themealdb.com\""
             buildConfigField "String", "TYPE", "\"android\""
         }
         production {
-            buildConfigField "String", "SERVICE_URL", "\"https://homy.arabaps.com\""
+            buildConfigField "String", "SERVICE_URL", "\"https://www.themealdb.com\""
             buildConfigField "String", "TYPE", "\"android\""
         }
     }
