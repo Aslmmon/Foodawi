@@ -1,4 +1,4 @@
-package com.example.foodawi.features.Main
+package com.example.foodawi.features.home_categories
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

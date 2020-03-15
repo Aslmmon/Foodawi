@@ -2,7 +2,7 @@ package com.example.splasho.di
 
 
 
-import com.example.foodawi.features.Main.MainActivityViewModel
+import com.example.foodawi.features.home_categories.MainActivityViewModel
 import org.koin.android.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 

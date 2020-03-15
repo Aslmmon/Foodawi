@@ -21,11 +21,8 @@ ext {
     def androidXTestCoreVersion = '1.2.0'
     def androidXTestExtKotlinRunnerVersion = '1.1.1'
     def robolectricVersion = '4.3.1'
-   def archTestingVersion = '2.0.0'
+    def archTestingVersion = '2.0.0'
     def coroutinesVersion = '1.2.1'
-
-
-
 
 
     imageslibraries = [
@@ -42,7 +39,7 @@ ext {
             // mocks
             MockitonTesting        : "org.mockito:mockito-core:2.23.0",
             coroutineAdapterFactory: 'com.jakewharton.retrofit:retrofit2-kotlin-coroutines-experimental-adapter:1.0.0',
-            coroutineADapterFActory :  "com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:0.9.2"
+            coroutineADapterFActory: "com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:0.9.2"
 
     ]
     kointTest = [
@@ -90,7 +87,9 @@ ext {
     ]
     koin = [
             koinViewModel: "org.koin:koin-android-viewmodel:${koin_version}",
-            KoinCore     : "org.koin:koin-core:${koin_version}"
+            KoinCore     : "org.koin:koin-core:${koin_version}",
+            lottie       : "com.airbnb.android:lottie:3.3.1"
+
     ]
 
     googlePlayServices = [
@@ -120,12 +119,12 @@ ext {
     ]
     test = [
             // Dependencies for local unit tests
-            junit : "junit:junit:$junitVersion",
+            junit           : "junit:junit:$junitVersion",
             androidXTestCore: "androidx.test:core-ktx:$androidXTestCoreVersion",
-            roboElectric:  "org.robolectric:robolectric:$robolectricVersion",
-            kotlinRunner : "androidx.test.ext:junit-ktx:$androidXTestExtKotlinRunnerVersion",
-            hamcrest : "org.hamcrest:hamcrest-all:$hamcrestVersion",
-            coreTesting : "androidx.arch.core:core-testing:$archTestingVersion",
-            coroutineTest : "org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutinesVersion"
+            roboElectric    : "org.robolectric:robolectric:$robolectricVersion",
+            kotlinRunner    : "androidx.test.ext:junit-ktx:$androidXTestExtKotlinRunnerVersion",
+            hamcrest        : "org.hamcrest:hamcrest-all:$hamcrestVersion",
+            coreTesting     : "androidx.arch.core:core-testing:$archTestingVersion",
+            coroutineTest   : "org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutinesVersion"
     ]
 }
