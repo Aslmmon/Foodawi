@@ -1,0 +1,2 @@
+rootProject.name='Foodawi'
+include ':app'
