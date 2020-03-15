@@ -1,17 +1,24 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
-
+apply plugin: 'kotlin-kapt'
+apply from: '../buildSystem/dependencies.gradle'
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.3"
 
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
     defaultConfig {
         applicationId "com.example.foodawi"
-        minSdkVersion 16
+        minSdkVersion 18
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
+        multiDexEnabled true
+
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -20,6 +27,19 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+
+    flavorDimensions "versions"
+    productFlavors {
+        staging {
+            buildConfigField "String", "SERVICE_URL", "\"https://homy.arabaps.com\""
+            buildConfigField "String", "TYPE", "\"android\""
+        }
+        production {
+            buildConfigField "String", "SERVICE_URL", "\"https://homy.arabaps.com\""
+            buildConfigField "String", "TYPE", "\"android\""
         }
     }
 
@@ -34,4 +54,21 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    implementation googlePlayServices.values()
+    implementation kotlin.values()
+    implementation imageslibraries.values()
+    implementation rxJavaDependencies.values()
+    implementation networkDependencies.values()
+    implementation shimmer.values()
+    implementation viewPager.values()
+    implementation pagination.values()
+    implementation koin.values()
+    implementation coroutine.values()
+
+
+    implementation('com.github.ihsanbal:LoggingInterceptor:2.0.7') {
+        exclude group: 'org.json', module: 'json'
+    }
+
 }
