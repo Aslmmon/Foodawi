@@ -16,6 +16,7 @@ class SplashActivity : AppCompatActivity(R.layout.activity_splash) {
         GlobalScope.launch {
             delay(5000)
             startActivity(Intent(this@SplashActivity, MainActivity::class.java))
+            finish()
         }
     }
 }

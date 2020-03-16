@@ -1,11 +1,7 @@
 package com.example.foodawi.common.network
 
-import android.app.Application
 import android.util.Log
 import com.example.foodawi.BuildConfig
-import com.example.foodawi.common.di.getSharedPrefrences
-import com.example.foodawi.common.db.SaveSharedPreference
-import com.homyapplication.common.Constants
 import com.ihsanbal.logging.Level
 import com.ihsanbal.logging.LoggingInterceptor
 import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
@@ -17,7 +13,6 @@ import okhttp3.internal.platform.Platform
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import java.util.*
 import java.util.concurrent.TimeUnit
 
 
