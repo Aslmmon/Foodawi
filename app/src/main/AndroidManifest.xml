@@ -11,7 +11,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".features.meal_categories.MealsActivity"></activity>
-        <activity android:name=".features.splash.SplashActivity">
+        <activity
+            android:name=".features.splash.SplashActivity"
+            android:theme="@style/Theme.MaterialComponents.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

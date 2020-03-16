@@ -12,6 +12,7 @@ import com.example.foodawi.features.home_categories.adapter.CategoriesAdapter
 import com.example.foodawi.features.meal_categories.adapter.MealsAdapter
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_details.*
+import kotlinx.android.synthetic.main.loading_animation.*
 import org.koin.android.viewmodel.ext.android.viewModel
 
 class MealsActivity : AppCompatActivity(R.layout.activity_details), MealsAdapter.Interaction {
@@ -22,6 +23,7 @@ class MealsActivity : AppCompatActivity(R.layout.activity_details), MealsAdapter
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         initRecycler()
+        loading.start()
         val extras = intent.extras
         extras?.let {
             val dataRecieved = it.getString(Constants.CATEGORY_NAME)
@@ -34,9 +36,11 @@ class MealsActivity : AppCompatActivity(R.layout.activity_details), MealsAdapter
         mealViewModel.mealCategories.observe(this, Observer {
             Log.i(javaClass.simpleName, it.meals.toString())
             mealsAdapter.submitList(it.meals)
+            loading.stop()
         })
         mealViewModel.ErrorMessage.observe(this, Observer {
             Log.i(javaClass.simpleName, it)
+            loading.stop()
         })
     }
 

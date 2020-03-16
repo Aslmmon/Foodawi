@@ -1,5 +1,6 @@
 package com.example.foodawi.features.home_categories
 
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -20,6 +21,10 @@ class MainActivity : AppCompatActivity(R.layout.activity_main), CategoriesAdapte
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        title = "Home"
+        supportActionBar?.title = "bye"
+        titleColor = Color.RED
+
         initRecycler()
         mainViewModel.getCategories()
         startLoading()
@@ -52,6 +57,6 @@ class MainActivity : AppCompatActivity(R.layout.activity_main), CategoriesAdapte
 
     override fun onItemSelected(position: Int, item: Category) {
         Log.i(javaClass.simpleName, "clicked on ${item.strCategory}")
-        Navigation.goToDetailsActivity(this,item.strCategory)
+        Navigation.goToDetailsActivity(this, item.strCategory)
     }
 }
