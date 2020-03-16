@@ -13,5 +13,5 @@
     app:layout_constraintTop_toTopOf="parent"
     app:loading_color="@color/colorPrimary"
     app:loading_speed="10"
-    app:loading_width="@dimen/_2dp"
+    app:loading_width="@dimen/_8dp"
     tools:showIn="@layout/activity_main" />
