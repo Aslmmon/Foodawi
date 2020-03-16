@@ -1,10 +1,9 @@
-package com.example.foodawi.features.details
+package com.example.foodawi.features.meal_categories
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.foodawi.common.bases.launchDataLoad
-import com.example.foodawi.common.model.categories.CategoriesResponse
 import com.example.foodawi.common.model.categories.mealsResponse.MealsResponse
 import com.example.foodawi.common.repositories.MainRepo.IMain
 

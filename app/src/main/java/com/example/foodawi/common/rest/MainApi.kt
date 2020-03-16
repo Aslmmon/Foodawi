@@ -11,9 +11,7 @@ interface MainApi {
     @GET("/api/json/v1/1/categories.php")
     suspend fun getFoodCategories(): CategoriesResponse
 
-
     @GET("/api/json/v1/1/filter.php")
     suspend fun getMeals(@Query("c") category: String): MealsResponse
-
 
 }

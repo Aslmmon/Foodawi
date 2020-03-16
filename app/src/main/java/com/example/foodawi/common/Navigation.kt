@@ -2,7 +2,7 @@ package com.example.foodawi.common
 
 import android.content.Context
 import android.content.Intent
-import com.example.foodawi.features.details.MealsActivity
+import com.example.foodawi.features.meal_categories.MealsActivity
 
 object Navigation {
 
