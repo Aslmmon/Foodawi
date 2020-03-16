@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import androidx.lifecycle.Observer
+import androidx.recyclerview.widget.GridLayoutManager
 import com.example.foodawi.R
 import com.example.foodawi.common.model.categories.Category
 import com.example.foodawi.features.home_categories.adapter.CategoriesAdapter
@@ -30,6 +31,7 @@ class MainActivity : AppCompatActivity(R.layout.activity_main), CategoriesAdapte
 
     private fun initRecycler() {
         recycler_food_categories.apply {
+            layoutManager = GridLayoutManager(this@MainActivity, 2)
             mainCategoriesADapter = CategoriesAdapter(this@MainActivity)
             adapter = mainCategoriesADapter
         }
