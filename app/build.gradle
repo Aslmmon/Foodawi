@@ -65,10 +65,10 @@ dependencies {
     implementation pagination.values()
     implementation koin.values()
     implementation coroutine.values()
+    implementation others.values()
 
 
     implementation('com.github.ihsanbal:LoggingInterceptor:2.0.7') {
         exclude group: 'org.json', module: 'json'
     }
-
 }

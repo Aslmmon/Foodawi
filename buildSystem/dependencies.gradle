@@ -87,8 +87,7 @@ ext {
     ]
     koin = [
             koinViewModel: "org.koin:koin-android-viewmodel:${koin_version}",
-            KoinCore     : "org.koin:koin-core:${koin_version}",
-            lottie       : "com.airbnb.android:lottie:3.3.1"
+            KoinCore     : "org.koin:koin-core:${koin_version}"
 
     ]
 
@@ -115,7 +114,11 @@ ext {
             autodimension       : "com.github.hantrungkien:AutoDimension:1.0.4",
             flashbar            : "com.andrognito.flashbar:flashbar:1.0.3",
             androidValidation   : 'com.mobsandgeeks:android-saripaar:2.0.3',
-            animatedButton      : 'br.com.simplepass:loading-button-android:2.2.0'
+            animatedButton      : 'br.com.simplepass:loading-button-android:2.2.0',
+            loading             : 'com.victor:lib:1.0.4',
+            lottie       : "com.airbnb.android:lottie:3.3.1",
+
+
     ]
     test = [
             // Dependencies for local unit tests

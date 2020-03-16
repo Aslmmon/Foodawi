@@ -9,6 +9,7 @@ import com.example.foodawi.R
 import com.example.foodawi.common.model.categories.Category
 import com.example.foodawi.features.home_categories.adapter.CategoriesAdapter
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.loading_animation.*
 import org.koin.android.viewmodel.ext.android.viewModel
 
 class MainActivity : AppCompatActivity(R.layout.activity_main), CategoriesAdapter.Interaction {
@@ -20,13 +21,24 @@ class MainActivity : AppCompatActivity(R.layout.activity_main), CategoriesAdapte
         super.onCreate(savedInstanceState)
         initRecycler()
         mainViewModel.getCategories()
+        startLoading()
         mainViewModel.CategoriesResponse.observe(this, Observer {
             Log.i(javaClass.simpleName, it.toString())
+            stopLoading()
             mainCategoriesADapter.submitList(it.categories)
         })
         mainViewModel.ErrorMessage.observe(this, Observer {
             Log.i(javaClass.simpleName, it.toString())
+            stopLoading()
         })
+    }
+
+    private fun startLoading() {
+        loading.start()
+    }
+
+    private fun stopLoading() {
+        loading.stop()
     }
 
     private fun initRecycler() {
