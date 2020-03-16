@@ -5,7 +5,7 @@ import android.content.Context
 import com.example.foodawi.common.di.networkModule
 import com.example.foodawi.common.di.repositoriesModule
 import com.example.foodawi.common.di.sharedPref
-import com.example.splasho.di.viewModelModule
+import com.example.foodawi.common.di.viewModelModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin

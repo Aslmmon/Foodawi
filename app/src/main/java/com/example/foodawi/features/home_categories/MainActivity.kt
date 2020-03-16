@@ -6,6 +6,7 @@ import android.util.Log
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.foodawi.R
+import com.example.foodawi.common.Navigation
 import com.example.foodawi.common.model.categories.Category
 import com.example.foodawi.features.home_categories.adapter.CategoriesAdapter
 import kotlinx.android.synthetic.main.activity_main.*
@@ -51,5 +52,6 @@ class MainActivity : AppCompatActivity(R.layout.activity_main), CategoriesAdapte
 
     override fun onItemSelected(position: Int, item: Category) {
         Log.i(javaClass.simpleName, "clicked on ${item.strCategory}")
+        Navigation.goToDetailsActivity(this,item.strCategory)
     }
 }
