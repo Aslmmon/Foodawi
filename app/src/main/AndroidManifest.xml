@@ -10,7 +10,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".features.meal_categories.MealsActivity"></activity>
+        <activity android:name=".features.meal_details.MealDetailActivity"></activity>
+        <activity android:name=".features.meal_categories.MealsActivity" />
         <activity
             android:name=".features.splash.SplashActivity"
             android:theme="@style/Theme.MaterialComponents.NoActionBar">

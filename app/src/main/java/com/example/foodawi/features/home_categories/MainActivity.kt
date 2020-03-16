@@ -57,6 +57,6 @@ class MainActivity : AppCompatActivity(R.layout.activity_main), CategoriesAdapte
 
     override fun onItemSelected(position: Int, item: Category) {
         Log.i(javaClass.simpleName, "clicked on ${item.strCategory}")
-        Navigation.goToDetailsActivity(this, item.strCategory)
+        Navigation.goToMealActivity(this, item.strCategory)
     }
 }

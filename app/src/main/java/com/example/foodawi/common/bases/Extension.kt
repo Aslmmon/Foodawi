@@ -13,6 +13,7 @@ import android.os.CountDownTimer
 import android.text.Editable
 import android.view.View
 import android.widget.TextView
+import android.widget.Toast
 import androidx.core.app.NotificationCompat
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -26,6 +27,9 @@ import retrofit2.HttpException
 import java.net.SocketTimeoutException
 import java.net.UnknownHostException
 
+fun Context.toast(message: String) {
+    Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
+}
 //
 //fun Throwable?.toErrorBody(): String {
 //    val s = when (this) {
@@ -92,9 +96,10 @@ import java.net.UnknownHostException
 //}
 
 fun ViewModel.launchDataLoad(
-        execution: suspend CoroutineScope.() -> Unit,
-        errorReturned: suspend CoroutineScope.(Throwable) -> Unit,
-        finallyBlock: (suspend CoroutineScope.() -> Unit)? = null) {
+    execution: suspend CoroutineScope.() -> Unit,
+    errorReturned: suspend CoroutineScope.(Throwable) -> Unit,
+    finallyBlock: (suspend CoroutineScope.() -> Unit)? = null
+) {
 
     this.viewModelScope.launch {
         try {
