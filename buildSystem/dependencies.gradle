@@ -116,7 +116,7 @@ ext {
             androidValidation   : 'com.mobsandgeeks:android-saripaar:2.0.3',
             animatedButton      : 'br.com.simplepass:loading-button-android:2.2.0',
             loading             : 'com.victor:lib:1.0.4',
-            lottie       : "com.airbnb.android:lottie:3.3.1",
+            lottie              : "com.airbnb.android:lottie:3.3.1",
 
 
     ]
@@ -128,6 +128,7 @@ ext {
             kotlinRunner    : "androidx.test.ext:junit-ktx:$androidXTestExtKotlinRunnerVersion",
             hamcrest        : "org.hamcrest:hamcrest-all:$hamcrestVersion",
             coreTesting     : "androidx.arch.core:core-testing:$archTestingVersion",
-            coroutineTest   : "org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutinesVersion"
+            coroutineTest   : "org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutinesVersion",
+            mockkito        : 'org.mockito:mockito-core:2.19.0'
     ]
 }

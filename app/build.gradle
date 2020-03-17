@@ -42,6 +42,13 @@ android {
             buildConfigField "String", "TYPE", "\"android\""
         }
     }
+    sourceSets {
+        main {
+            res {
+                srcDirs 'src/main/res', 'src/test/resources'
+            }
+        }
+    }
 
 }
 
@@ -66,6 +73,7 @@ dependencies {
     implementation koin.values()
     implementation coroutine.values()
     implementation others.values()
+    testImplementation test.values()
 
 
     implementation('com.github.ihsanbal:LoggingInterceptor:2.0.7') {
