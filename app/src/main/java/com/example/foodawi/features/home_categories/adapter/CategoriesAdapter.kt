@@ -21,7 +21,7 @@ class CategoriesAdapter(private val interaction: Interaction? = null) :
         }
 
         override fun areContentsTheSame(oldItem: Category, newItem: Category): Boolean {
-            return oldItem.idCategory == newItem.idCategory
+            return oldItem == newItem
         }
 
     }
@@ -68,7 +68,7 @@ class CategoriesAdapter(private val interaction: Interaction? = null) :
             }
             itemView.tv_category_name.text = item.strCategory
             val picasso = Picasso.get()
-            picasso.load(item.strCategoryThumb).into(itemView.iv_food_item)
+            picasso.load(item.strCategoryThumb).placeholder(R.drawable.loading_animation).into(itemView.iv_food_item)
         }
     }
 

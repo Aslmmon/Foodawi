@@ -10,18 +10,37 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".features.meal_details.MealDetailActivity"></activity>
+        <activity android:name=".features.search.SearchableActivity"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
+        <activity android:name=".features.meal_details.MealDetailActivity" />
         <activity android:name=".features.meal_categories.MealsActivity" />
         <activity
             android:name=".features.splash.SplashActivity"
             android:theme="@style/Theme.MaterialComponents.NoActionBar">
+        </activity>
+        <activity android:name=".features.home_categories.MainActivity">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
         </activity>
-        <activity android:name=".features.home_categories.MainActivity" />
+
+        <!-- enable the search dialog to send searches to SearchableActivity -->
+
+        <meta-data
+            android:name="android.app.default_searchable"
+            android:value=".SearchableActivity" />
     </application>
 
 </manifest>

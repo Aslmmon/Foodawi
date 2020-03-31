@@ -66,7 +66,7 @@ class MealsAdapter(private val interaction: Interaction? = null) :
                 interaction?.onItemSelected(adapterPosition, item)
             }
             val picasso = Picasso.get()
-            picasso.load(item.strMealThumb).resize(150,150).into(itemView.iv_mealImage)
+            picasso.load(item.strMealThumb).resize(150,150).placeholder(R.drawable.loading_animation).into(itemView.iv_mealImage)
             itemView.tv_meal_name.text = item.strMeal
         }
     }

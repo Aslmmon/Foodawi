@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Foodawi</string>
+    <string name="search_hint">search</string>
+    <string name="search">search</string>
 </resources>
