@@ -7,6 +7,7 @@ import androidx.lifecycle.Observer
 import com.example.foodawi.R
 import com.example.foodawi.common.Constants
 import com.example.foodawi.common.Navigation
+import com.example.foodawi.common.bases.toast
 import com.example.foodawi.common.model.categories.mealsResponse.Meal
 import com.example.foodawi.features.meal_categories.adapter.MealsAdapter
 import kotlinx.android.synthetic.main.activity_details.*
@@ -38,6 +39,7 @@ class MealsActivity : AppCompatActivity(R.layout.activity_details), MealsAdapter
         })
         mealViewModel.ErrorMessage.observe(this, Observer {
             Log.i(javaClass.simpleName, it)
+            toast(it)
             loading.stop()
         })
     }

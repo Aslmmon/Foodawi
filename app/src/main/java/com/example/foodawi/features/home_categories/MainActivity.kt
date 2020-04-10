@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity(R.layout.activity_main), CategoriesAdapte
             mainCategoriesADapter.submitList(it.categories)
         })
         mainViewModel.ErrorMessage.observe(this, Observer {
-            Log.i(javaClass.simpleName, it.toString())
+            toast(it)
             stopLoading()
         })
     }
